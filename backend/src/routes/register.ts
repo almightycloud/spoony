@@ -27,11 +27,14 @@ const register: Middleware = async (ctx) => {
     return;
   }
 
+  logger.continueDebug('normalizing phone-number...');
+  const phoneNumber = params.phoneNumber.replace('-', '');
+
   logger.continueDebug('hashing password...');
   const password = await bcrypt.hash(params.password, await bcrypt.genSalt());
 
   logger.continueDebug('inserting user...');
-  const [userId] = await db.insert({ ...params, password }).into('user').returning('user_id');
+  const [userId] = await db.insert({ ...params, phoneNumber, password }).into('user').returning('user_id');
 
   logger.continueDebug('generating jwt...');
   const token = createJWT(userId);

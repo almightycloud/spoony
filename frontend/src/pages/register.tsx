@@ -65,35 +65,35 @@ const Register: React.FC = () => {
             <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="first-name">
               First Name
             </label>
-            <ErrorMessage name="firstName" className="text-sm text-red-500" component="span" />
+            <ErrorMessage name="firstName" className="text-sm text-red-500 mb-1" component="div" />
             <Field className="appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" name="firstName" type="text" placeholder="John" autoComplete="off" />
           </div>
           <div className="mb-4">
             <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="last-name">
               Last Name
             </label>
-            <ErrorMessage name="lastName" className="text-sm text-red-500" component="span" />
+            <ErrorMessage name="lastName" className="text-sm text-red-500 mb-1" component="div" />
             <Field className="appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" name="lastName" type="text" placeholder="Doe" autoComplete="off" />
           </div>
           <div className="mb-4">
             <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="email">
               Email
             </label>
-            <ErrorMessage name="email" className="text-sm text-red-500" component="span" />
+            <ErrorMessage name="email" className="text-sm text-red-500 mb-1" component="div" />
             <Field className="appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" name="email" type="email" placeholder="john.doe@email.com" autoComplete="off" />
           </div>
           <div className="mb-4">
             <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="phone-number">
               Phone Number
             </label>
-            <ErrorMessage name="phoneNumber" className="text-sm text-red-500" component="span" />
-            <Field className="appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" name="phoneNumber" type="tel" placeholder="555-555-5555" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" autoComplete="off" />
+            <ErrorMessage name="phoneNumber" className="text-sm text-red-500 mb-1" component="div" />
+            <Field className="appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" name="phoneNumber" type="tel" placeholder="555-555-5555" pattern="^[0-9]{3}-?[0-9]{3}-?[0-9]{4}$" autoComplete="off" />
           </div>
           <div className="mb-4">
             <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="password">
               Password
             </label>
-            <ErrorMessage name="password" className="text-sm text-red-500" component="span" />
+            <ErrorMessage name="password" className="text-sm text-red-500 mb-1" component="div" />
             <Field className="appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" name="password" type="password" placeholder="******************" autoComplete="off" />
           </div>
           <button className="w-full mb-4 bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit">

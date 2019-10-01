@@ -6,10 +6,21 @@ In order to run this project [`docker`](https://www.docker.com/) must be install
 
 All you need to do is clone the repository and run `docker-compose up` in the root of the project. This will initialize a [PostgreSQL](https://www.postgresql.org/) database, start an [NGINX](https://www.nginx.com/) server, and build/launch both the frontend and backend.
 
+### macOS & Windows
+
 ```sh
 $ git clone https://github.com/scott-rc/spoony.git
 $ cd spoony
 $ docker-compose up -d
+...
+```
+
+### Linux
+
+```sh
+$ git clone https://github.com/scott-rc/spoony.git
+$ cd spoony
+$ docker-compose -f docker-compose.linux.yml up -d
 ...
 ```
 
@@ -32,8 +43,17 @@ To build this project manually you will need [`node`](https://nodejs.org) instal
 
 Development requires [NGINX](https://www.nginx.com/) and [PostgreSQL](https://www.postgresql.org/) running so we'll use [`docker-compose`](https://docs.docker.com/compose/) to create our local database.
 
+### macOS & Windows
+
 ```sh
 $ docker-compose -f docker-compose.dev.yml up -d
+...
+```
+
+### Linux
+
+```sh
+$ docker-compose -f docker-compose.linux.dev.yml up -d
 ...
 ```
 
